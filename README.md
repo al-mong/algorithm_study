@@ -56,9 +56,9 @@
 
 - 다른 스터디원의 폴더를 열면 안 된다!
 
-  - 다른 스터디원의 폴더를 참고하고 싶다면 알몽 알고리즘 스터디 Repository를 접속하여 코드 보기!
+  - 다른 스터디원의 코드를 참고하고 싶다면 알몽 알고리즘 스터디 Repository를 접속하여 코드 보기!
 
-    [알몽 알고리즘 스터디 레포지터리 링크](https://github.com/al-mong/algorithm_study)
+    [알몽 레포지터리 링크](https://github.com/al-mong)
 
 - 본인 작업 후 git status를 입력했을 때 다른사람 폴더의 변경사항이 있다면?
   - 해결법 
