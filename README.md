@@ -11,15 +11,19 @@
 
 1. algorithm_study 폴더에서 우클릭하여 `Git Bash Here` 클릭!
 
-2. 터미널에 명령어 `git status`를 입력 후 변경사항 확인!
+2. 터미널에 명령어 `git pull` 입력!
+
+   `충돌 방지` 
+
+3. 터미널에 명령어 `git status`를 입력 후 변경사항 확인!
 
    **`본인 폴더 외에 변경사항 있으면 안돼요~~`**
 
-3. 터미널에 명령어 `git add .` or `git add <filename>` 입력!
+4. 터미널에 명령어 `git add .` or `git add <filename>` 입력!
 
-4. 터미널에 명령어 `git commit -m "류승태 220726"` 커밋 메세지는 이름, 날짜 순으로 입력!
+5. 터미널에 명령어 `git commit -m "류승태 220726"` 커밋 메세지는 이름, 날짜 순으로 입력!
 
-5. 터미널에 명령어 `git push origin main` 으로 푸쉬 끝!
+6. 터미널에 명령어 `git push origin main` 으로 푸쉬 끝!
 
 ## 폴더 작성 법
 
