@@ -15,6 +15,6 @@ for i in range(n):
                 ck = 1
             elif i != 'O':
                 ck = 0                              # 두 번째 문제부터 연속되면 점수 가산점, 아니면 초기화
-        score = score + ck
+        score = score + ck                          # 총합 결과
 
     print(score)
