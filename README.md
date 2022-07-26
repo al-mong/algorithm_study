@@ -9,21 +9,23 @@
   2. 터미널에 명령어 `git clone https://github.com/al-mong/algorithm_study.git` 입력!
 - 레포지터리에 push하기
 
-1. algorithm_study 폴더에서 우클릭하여 `Git Bash Here` 클릭!
+  1. algorithm_study 폴더에서 우클릭하여 `Git Bash Here` 클릭!
 
-2. 터미널에 명령어 `git pull` 입력!
 
-   `충돌 방지` 
+  2. 터미널에 명령어 `git pull` 입력!
 
-3. 터미널에 명령어 `git status`를 입력 후 변경사항 확인!
+     `충돌 방지` 
 
-   **`본인 폴더 외에 변경사항 있으면 안돼요~~`**
+  3. 터미널에 명령어 `git status`를 입력 후 변경사항 확인!
 
-4. 터미널에 명령어 `git add .` or `git add <filename>` 입력!
+     **`본인 폴더 외에 변경사항 있으면 안돼요~~`**
 
-5. 터미널에 명령어 `git commit -m "류승태 220726"` 커밋 메세지는 이름, 날짜 순으로 입력!
 
-6. 터미널에 명령어 `git push origin main` 으로 푸쉬 끝!
+  4. 터미널에 명령어 `git add .` or `git add <filename>` 입력!
+
+  5. 터미널에 명령어 `git commit -m "류승태 220726"` 커밋 메세지는 이름, 날짜 순으로 입력!
+
+  6. 터미널에 명령어 `git push origin main` 으로 푸쉬 끝!
 
 ## 폴더 작성 법
 
@@ -58,3 +60,11 @@
   - 해결법
     1. 본인 작업물을 새폴더에 백업한 후 algorithm-study 폴더 삭제 및 다시 clone하기
     2. 다른 사람 폴더는 add 하지말고 본인 폴더만 add 하기
+
+
+
+
+
+## 잡답 노트
+
+- [220727] pull, add, commit, push는 항상 `.git`이 있는 폴더에서 하는겁니다!
