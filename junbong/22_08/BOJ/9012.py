@@ -3,6 +3,9 @@ import sys
 from collections import deque
 
 '''
+메모리: 32432kb
+시간: 88ms
+
 1. 스택 문제인 이유
 닫는 괄호가 나오면 가장 최근의 여는 괄호가 닫힌다.
 스택의 개념인 후입선출-LIFO(Last In First Out) 방식.

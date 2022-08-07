@@ -3,6 +3,9 @@ import sys
 from collections import deque
 
 '''
+메모리: 32416kb
+시간: 3036ms
+
 1. 큐 문제인 이유
 큐: 선입선출-FIFO(First In First Out)
 원을 따라 계속해서 순회하면서 매 k번째마다 뽑아내는 방식은
