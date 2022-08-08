@@ -17,7 +17,7 @@ while round != deque([]):                       # 리스트에 값이 없으면 
 
 
 print('<', end='')                              # <
-for i in range(len(result)-1):                  # 마지막 전까지 '숫자, ' 조합
+for i in range(len(result)-1):                  # 마지막 전까지 '숫자, ' 조합 
     print(f'{result[i]}, ', end='')
 print(result[-1], end='')                       # 마지막 숫자만
 print('>', end='')                              # >
