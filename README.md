@@ -21,11 +21,13 @@
      **`본인 폴더 외에 변경사항 있으면 안돼요~~`**
 
 
-  4. 터미널에 명령어 `git add .` or `git add <filename>` 입력!
+    4. 터미널에 명령어 `git add .` or `git add <filename>` 입력!
 
-  5. 터미널에 명령어 `git commit -m "류승태 220726"` 커밋 메세지는 이름, 날짜 순으로 입력!
+    5. 터미널에 명령어 `git commit -m "류승태 220726"` 커밋 메세지는 이름, 날짜 순으로 입력!
 
-  6. 터미널에 명령어 `git push origin main` 으로 푸쉬 끝!
+    6.  :collision: **푸쉬 하기 전에 꼭 `git pull` 먼저 하기**  :collision:
+
+    7. 터미널에 명령어 `git push origin main` 으로 푸쉬 끝!
 
 ## 폴더 작성 법
 
