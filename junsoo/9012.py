@@ -12,7 +12,7 @@ for i in range(t):
             if list_left != []:
                 list_left.pop()
             else:
-                list_right.append(k)    # 우측에 받을 때, 좌측 스택에 값이 있으면 좌측 유지. 우측 제거
+                list_right.append(k)    # 우측에 받을 때, 좌측 스택에 값이 있으면 좌측 유지. 우측 제거 
 
     if list_left == [] and list_right == []:
         print('YES')
