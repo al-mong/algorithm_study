@@ -1,6 +1,8 @@
 # :rainbow: 알몽
 
-<br><img src="./README.assets/몽실.jpg" alt="몽실"  />
+![mongsil](README.assets/mongsil.png)![gether](README.assets/gether.png)
+
+<br>
 <br>
 
 ## :one: 학습 목표
