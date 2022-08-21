@@ -1,6 +1,6 @@
 # :rainbow: 알몽
 
-<br>
+<br><img src="./.git/README.assets/몽실.jpg" alt="몽실"  />
 <br>
 
 ## :one: 학습 목표
