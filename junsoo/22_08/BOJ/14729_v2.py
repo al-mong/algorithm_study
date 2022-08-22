@@ -33,20 +33,24 @@ def merge(input_list):                                                      # �
                 if len(right) > 0:
                     rightnum = right.pop()
                 else:                                                       # right를 다 썼으면 left를 앞에 붙임
-                    new_list = left + [leftnum] + new_list[i:]
+                    new_list[i-1] = leftnum
+                    for k in range(i-1):
+                        new_list[k] = left[k]
                     break
             else:
                 new_list[i] = leftnum
                 if len(left) > 0:
                     leftnum = left.pop()
                 else:
-                    new_list = right + [rightnum] + new_list[i:]
+                    new_list[i - 1] = rightnum
+                    for k in range(i - 1):
+                        new_list[k] = right[k]
                     break
 
         return new_list
 
 
-n = int(sys.stdin.readline())                    # print(n, type(n[0])) = ['8'] <class 'str'>
+n = int(sys.stdin.readline())
 
 score = []
 for i in range(n):

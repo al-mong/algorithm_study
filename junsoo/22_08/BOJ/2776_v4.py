@@ -1,36 +1,19 @@
 '''
-코드의 문제점
-너무 느림 왜?
-1. 병합정렬
-    1. new_list = left + [leftnum] + new_list[i:] 파트에서 시간을 먹음.
-        - 합해서 하는 방법은 아예 없는가?
-        - for문으로 가능하다!
-            new_list = left + [leftnum] + new_list[i:]
-            대신
-            new_list[i-1] = leftnum     # pop()한 값 넣고
-            for k in range(i-1):        # 나머지 for문으로 채우기
-                new_list[k] = left[k]
+pypy3 기준
+339900kb, 2132ms
 
-        - 각자 지정해주는 방법을 사용하면 더 줄이기 가능
-
-    2. 재귀형식
-        - 재귀이면 무조건적인가?
-        - 바로 재귀를 탈출하는 방법이 있는가?
-        - 메모이제이션 사용해서 값이 있으면 바로 종료 - 이건 중간 값에서 끊을 때 사용
-        - 재귀의 끝자락에 있으면 차피 거슬러 나와야함
-
-2. 이진탐색
-    1. 재귀를 사용하면 매우 느림
-        - 바로 재귀를 탈출하는 방법이 있는가? 없으면 while문에 조건을 거는 방법밖에 없나?
-
-    2.
-
-
+파이썬3은 시간초과
 '''
-
 '''
 nlist는 병합정렬
 mlist 원소를 이진탐색
+'''
+'''
+1
+1
+1
+3
+1 2 1
 '''
 import sys
 
@@ -58,40 +41,40 @@ def merge(input_list):                                                      # �
                 if len(right) > 0:
                     rightnum = right.pop()
                 else:                                                       # right를 다 썼으면 left를 앞에 붙임
-                    new_list = left + [leftnum] + new_list[i:]
+                    new_list[i - 1] = leftnum   # pop()한 값 넣고
+                    for k in range(i - 1):      # 나머지 for문으로 채우기
+                        new_list[k] = left[k]
                     break
             else:
                 new_list[i] = leftnum
                 if len(left) > 0:
                     leftnum = left.pop()
                 else:
-                    new_list = right + [rightnum] + new_list[i:]
+                    new_list[i - 1] = rightnum  # pop()한 값 넣고
+                    for k in range(i - 1):  # 나머지 for문으로 채우기
+                        new_list[k] = right[k]
                     break
 
         return new_list
 
+def binary(mlist, nlist):
+    for i in mlist:
 
-def binary(want, input_list):
-    # input_list[len(input_list) // 2]  : 홀수일 땐 중앙, 짝수일 땐 중앙+1
-    # input_list는 정렬이 되어 있어야 한다.
-    if len(input_list) <= 2:                                # 리스트 길이가 2 이하일 때
-        if want in input_list:
-            print(1)
-        else:
+        start = 0
+        end = len(nlist) - 1
+
+        while start <= end:
+            mid = (start + end) // 2
+            if i < nlist[mid]:  # 찾을 숫자가 중앙 값보다 작을 때
+                end = mid - 1
+            elif i > nlist[mid]:
+                start = mid + 1
+            elif i == nlist[mid]:
+                print(1)
+                break
+
+        if start > end:
             print(0)
-    
-    else:
-        if want < input_list[len(input_list) // 2]:         # 찾을 숫자가 중앙 값보다 작을 때
-            binary(want, input_list[:len(input_list) // 2])
-
-        elif want > input_list[len(input_list) // 2]:       # 찾을 숫자가 중앙 값보다 클 때
-            binary(want, input_list[len(input_list) // 2:])
-    
-        else:                                              # 같을 때
-            print(1)                                       # 1 출력
-
-
-
 
 t = int(input())
 for i in range(t):
@@ -101,5 +84,35 @@ for i in range(t):
     mlist = list(map(int, sys.stdin.readline().split()))
 
     nlist = merge(nlist)
-    for i in mlist:
-        binary(i, nlist)
+    binary(mlist, nlist)
+
+'''
+차이점이 무엇인지?
+함수를 따로 지정 하는 것이 시간 단축의 효과가 있는가?
+
+import sys
+
+def bs(li, n):
+    s, e = 0, len(li) - 1
+    while s <= e:
+        m = (s + e) // 2
+        if li[m] == n:
+            return 1
+        elif li[m] < n:
+            s = m + 1
+        else:
+            e = m - 1
+    return 0
+
+
+for _ in range(int(input())):
+    N = int(input())
+    li1 = sorted(list(map(int, input().split())))
+    M = int(input())
+    li2 = list(map(int, input().split()))
+    for n in li2:
+        print(bs(li1, n))
+'''
+
+
+
