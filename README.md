@@ -1,6 +1,6 @@
 # :rainbow: 알몽
 
-![mongsil](README.assets/mongsil.png)![gether](README.assets/gether.png)
+![mongsil](README.assets/mongsil.png)![gether](README.assets/gether2.png)
 
 <br>
 <br>
