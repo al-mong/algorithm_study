@@ -8,6 +8,7 @@ C.reverse()
 for i in C:
     B_idx.append(B.index(i))
 sum = 0
+print(B_idx)
 for j in range(T):
     sum += A[j]*B[B_idx[j]]
 
