@@ -1,4 +1,4 @@
-# 실버3
+#  실버3
 
 N = int(input())
 stairs = [0]  # 계단 value 입력받기
