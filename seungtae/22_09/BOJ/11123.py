@@ -29,3 +29,4 @@ for tc in range(1, T+1):
                         q.append((nx, ny))
                         visited[nx][ny] = True
     print(count)
+    

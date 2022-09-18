@@ -32,3 +32,4 @@ while True:
                         q.append((nx, ny))
                         visited[nx][ny] = True
     print(count)
+    
