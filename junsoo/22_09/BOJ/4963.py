@@ -1,5 +1,5 @@
 import sys
-sys.setrecursionlimit(1000000)
+sys.setrecursionlimit(100000)
 
 def check(i, k):
     if mymap[i][k] == 1:
