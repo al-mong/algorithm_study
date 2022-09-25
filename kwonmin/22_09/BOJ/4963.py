@@ -1,6 +1,6 @@
 import sys
 
-limit_number = 15000
+limit_number = 15000 # 재귀범위 설정
 
 sys.setrecursionlimit(limit_number)
 
