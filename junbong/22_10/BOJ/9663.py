@@ -1,5 +1,3 @@
-# 221002
-
 def backtrack(i):
     global cnt
     if i == N:
