@@ -1,21 +1,21 @@
 import sys
 input = sys.stdin.readline
 
-def c(a, b):
+def c(a, b):                                         #조합 만들기
     global ans
     if b == 0:
         start = 0
-        # print(p)
+        # print(p)              
         for i in range(n):
             for j in range(n):
-                if i in p and j in p:
+                if i in p and j in p:                #조합안에 있으면 +
                     start += nums[i][j]
                     # print(f'+:{i}{j}{start}')
-                elif (i not in p) and (j not in p):
+                elif (i not in p) and (j not in p):  #조합안에 없으면 -
                     start -= nums[i][j]
                     # print(f'-:{i}{j}{start}')
         # print(f'start:{start}')
-        if abs(start) <= ans:
+        if abs(start) <= ans:                        #최소값 찾기
             ans = abs(start)
     elif a < b:
         return
