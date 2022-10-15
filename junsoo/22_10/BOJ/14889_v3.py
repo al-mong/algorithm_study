@@ -1,3 +1,7 @@
+'''
+랭커 코드
+
+'''
 import sys
 from itertools import combinations as cb
 N = int(sys.stdin.readline()) // 2
