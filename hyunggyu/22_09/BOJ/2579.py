@@ -4,7 +4,7 @@
 # 3개 연속 밟을수는 없다.
 # 계단 최대는 300개
 n = int(input())
-step = [0 for _ in range(301)]
+step = [list(map(int, input().split())) for _ in range(n)]
 # dp는 n까지의 최대값을 의미
 dp = [0 for _ in range(301)]
 dp[0] = step[0]
