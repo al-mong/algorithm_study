@@ -17,7 +17,11 @@ def solution(n, paths, gates, summits):
         min_intensities[gate] = 0
     
     while hq:
+<<<<<<< HEAD
         v, intensity = heapq.heappop(hq)
+=======
+        intensity, v = heapq.heappop(hq)
+>>>>>>> ab90105ed3fa60fcd4ee23bf54f9c3cd56429c8f
         if v in summits or intensity > min_intensities[v]:
             continue
         for nv, next_intensity in weights[v]:
@@ -29,6 +33,10 @@ def solution(n, paths, gates, summits):
     answer_cand = [[summit, min_intensities[summit]] for summit in summits]
     answer_cand.sort(key=lambda x: (x[1], x[0]))
     answer = answer_cand[0]
+<<<<<<< HEAD
+=======
+    
+>>>>>>> ab90105ed3fa60fcd4ee23bf54f9c3cd56429c8f
     return answer
 
 

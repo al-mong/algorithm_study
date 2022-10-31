@@ -29,6 +29,10 @@
 weights 구조 차이
 summits를 리스트로 놔두고 품 => in 연산자 속도 차이
 '''
+<<<<<<< HEAD
+=======
+
+>>>>>>> ab90105ed3fa60fcd4ee23bf54f9c3cd56429c8f
 import heapq
 
 
@@ -46,7 +50,11 @@ def solution(n, paths, gates, summits):
         min_intensities[gate] = 0  # 출입구의 intensity는 0
     
     while hq:
+<<<<<<< HEAD
         v, intensity = heapq.heappop(hq)
+=======
+        intensity, v = heapq.heappop(hq)
+>>>>>>> ab90105ed3fa60fcd4ee23bf54f9c3cd56429c8f
         # 시작점은 min_intensity가 0 이므로 in으로 확인안해도 됨
         if v not in summits and intensity <= min_intensities[v]:  
             for nv in range(1, n + 1):

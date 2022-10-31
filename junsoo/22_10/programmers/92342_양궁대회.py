@@ -23,7 +23,6 @@ def shot(n, info, target, mark, peach, lion): # 남은 횟수, 피치 과녁, �
     else:   # 값을 넘지 않으면
         C = shot(n-1, info, target, mark[:], peach, lion)
 
-
 def solution(n, info):
     global answer
 
