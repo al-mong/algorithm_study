@@ -42,7 +42,7 @@ def solution(n, paths, gates, summits):
     hq = []  # 힙큐 리스트
     
     for gate in gates:
-        heapq.heappush(hq, (gate, 0))  # 출입구 전부 힙큐에 넣어놓기
+        heapq.heappush(hq, (0, gate))  # 출입구 전부 힙큐에 넣어놓기
         min_intensities[gate] = 0  # 출입구의 intensity는 0
     
     while hq:
@@ -56,7 +56,7 @@ def solution(n, paths, gates, summits):
                     # nv 노드까지 기존보다 더 작은 intensity로 갈수있다면 갱신해줌
                     if next_intensity < min_intensities[nv]:
                         min_intensities[nv] = next_intensity
-                        heapq.heappush(hq, (nv, next_intensity))
+                        heapq.heappush(hq, (next_intensity, nv))
     
     # summit 중 최소 intensity 찾기
     min_intensity = INF
