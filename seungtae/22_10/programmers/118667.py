@@ -1,3 +1,6 @@
+# 시작할 때 리스트 길이 2배로 하니 1번만 틀리고 3배로 하니 통과. 
+# 무지성 큰곳에서 작은곳으로 요소 하나씩 던져주기 !
+
 from collections import deque
 
 def solution(queue1, queue2):

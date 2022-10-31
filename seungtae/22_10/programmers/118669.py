@@ -48,6 +48,7 @@ def solution(n, paths, gates, summits):
     for u in gates:
         gates_dic[u] = True
 
+    # 이건 그냥 해봄 안해도 되려나?
     summits = set(summits)
 
     # 경로 정보 저장
