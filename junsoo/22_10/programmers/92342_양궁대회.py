@@ -1,4 +1,3 @@
-
 def shot(n, info, target, mark, peach, lion): # 남은 횟수, 피치 과녁, 쏴야할 점수, 과녁 상황, 점수들
     global answer
 
