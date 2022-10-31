@@ -13,7 +13,7 @@ def solution(n, paths, gates, summits):
     summits = set(summits)  # 변경점2: set에서의 in 연산자는 시간 복잡도가 O(1)
     
     for gate in gates:
-        heapq.heappush(hq, (gate, 0))
+        heapq.heappush(hq, (0, gate))
         min_intensities[gate] = 0
     
     while hq:
@@ -24,7 +24,7 @@ def solution(n, paths, gates, summits):
             next_intensity = max(intensity, next_intensity)
             if next_intensity < min_intensities[nv]:
                 min_intensities[nv] = next_intensity
-                heapq.heappush(hq, (nv, next_intensity))
+                heapq.heappush(hq, (next_intensity, nv))
         
     answer_cand = [[summit, min_intensities[summit]] for summit in summits]
     answer_cand.sort(key=lambda x: (x[1], x[0]))
