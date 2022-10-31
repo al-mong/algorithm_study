@@ -46,7 +46,7 @@ def solution(n, paths, gates, summits):
         min_intensities[gate] = 0  # 출입구의 intensity는 0
     
     while hq:
-        v, intensity = heapq.heappop(hq)
+        intensity, v = heapq.heappop(hq)
         # 시작점은 min_intensity가 0 이므로 in으로 확인안해도 됨
         if v not in summits and intensity <= min_intensities[v]:  
             for nv in range(1, n + 1):
