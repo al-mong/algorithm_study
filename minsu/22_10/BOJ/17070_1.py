@@ -33,4 +33,4 @@ def dfs(i, j, t): #
             dfs(i+1, j+1, dae)
 
 dfs(0, 1, garo)
-print(cnt)
+print(cnt) 
