@@ -1,4 +1,4 @@
-def solution(new_id):
+def solution(new_id): # 대입
     # 1. 대문자 -> 소문자
     new_id = new_id.lower()
     # 2. 소문자, 숫자, 빼기, 밑줄, 마침표 제외 제거

@@ -1,4 +1,4 @@
-orders = ["XYZ", "XWY", "WXA"]
+orders = ["XYZ", "XWY", "WXA"] # 예제
 course = [2, 3, 4]
 new_menu = [[] for _ in range(11)] # course마다 가능 메뉴 10까지만 가능
 new_menu_count = {} # munu들의 count
