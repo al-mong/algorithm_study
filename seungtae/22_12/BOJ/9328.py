@@ -30,7 +30,7 @@ def dfs(x, y):
                 count += 1
                 dfs(nx, ny)
 
-            # key 이면 키줍고 다음 dfs 실행    +    키 없을때 막혔던 문 다 열기         
+            # key 이면 키줍고 다음 dfs 실행    +    키 없을때 막혔던 문 다 열기
             elif 97 <= ord(arr[nx][ny]) <= 122:
                 dfs(nx, ny)
                 key_dict[chr(ord(arr[nx][ny]) - 32)][0] = 1
