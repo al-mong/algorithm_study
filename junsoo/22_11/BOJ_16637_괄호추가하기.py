@@ -28,11 +28,13 @@ def check(new, s=0):    # 수식(str), 기호 시작점
         ans = answer(new)
         if ans > result:
             result = ans
+        # print(new)
         return
     elif s > n//2:
         ans = answer(new)
         if ans > result:
             result = ans
+        # print(new)
         return
 
     tmp = new
