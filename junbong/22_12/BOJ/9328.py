@@ -42,7 +42,7 @@ for T in range(int(input().rstrip())):
             keys.add(key)
     result = 0
     
-    starts = []  # 시작 위치 저장용 리스트
+    starts = deque()  # 시작 위치 저장용 리스트
     blocked_doors = defaultdict(list)  # 막혔던 위치 저장용 딕셔너리
 
     for i in range(h):
