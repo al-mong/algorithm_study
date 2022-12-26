@@ -20,4 +20,4 @@ total = 0
 for i in range(len(count_num)):
     total += count_num[i] * count
     count -= 1
-print(total)
+print(total) 
