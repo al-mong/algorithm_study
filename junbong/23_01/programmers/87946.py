@@ -28,7 +28,6 @@ def solution(k, dungeons):
     p = [i for i in range(n)]
     perm(0, n, n)
     
-    
     return answer
 
 
