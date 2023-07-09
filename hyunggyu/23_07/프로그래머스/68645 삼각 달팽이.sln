@@ -1,0 +1,45 @@
+from collections import deque
+n = int(input())
+graph = {}
+graph_num = 0
+num_value = 0
+for i in range(n-1,-1,-3):
+    graph_num += 1
+    graph[graph_num] = deque()
+    for j in range(3*i if i != 0 else 1):
+        tmp_j = num_value + j+1
+        graph[graph_num].append(tmp_j)
+    print(graph[graph_num])
+    num_value += 3*i
+answer = []
+for row in range(1,n+1):# 한칸씩 체우기 i는 몇번째 row인지
+    if row < n - graph_num + 1:
+        for j in range(row):
+            if j >= row/2:
+                num = row - j
+                tmp = graph[num].pop()
+                answer.append(tmp)
+                print(answer)
+            else:
+                num = j + 1
+                tmp = graph[num].popleft()
+                answer.append(tmp)
+                print(answer)
+    else:
+        num = n-row+1
+        print("num",num)
+        for i in range(1,num):
+            tmp = graph[i].popleft()
+            answer.append(tmp)
+        while graph[num]:
+            tmp = graph[num].popleft()
+            answer.append(tmp)
+        for i in range(num-1,0,-1):
+            tmp = graph[i].pop()
+            answer.append(tmp)
+        
+print(answer)
+
+
+
+
