@@ -1,9 +1,13 @@
-// 아이디가 불량 사용자 후보가 될 수 있는지 판단
 function isCandidate(userIdItem, bannedIdItem) {
   if (userIdItem.length === bannedIdItem.length) {
-    const regexPattern = new RegExp(`^${bannedIdItem.replace(/\*/g, ".*")}$`);
-    return regexPattern.test(userIdItem);
+    for (let i = 0; i < userIdItem.length; i++) {
+      if (bannedIdItem[i] !== "*" && userIdItem[i] !== bannedIdItem[i]) {
+        return false;
+      }
+    }
+    return true;
   }
+  return false;
 }
 
 function solution(userId, bannedId) {
@@ -12,7 +16,6 @@ function solution(userId, bannedId) {
 
   function dfs(j, candidates) {
     if (j === bannedId.length) {
-      // 문자열 정렬해서 추가, 023과 203은 같은 것이므로
       answer.add(candidates.split("").sort().join(""));
       return;
     }
